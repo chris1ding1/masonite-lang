@@ -91,17 +91,15 @@ Example translation file (`en.json`):
 
 ## Usage
 
-### Basic Setup
-
 ### python
 
 ```python
 from lang.facades import Lang
 
-Localization.current_locale()
-Localization.set_locale('en')
-Localization.is_locale('en')
-Localization.trans('trans')
+Lang.current_locale()
+Lang.set_locale('en')
+Lang.is_locale('en')
+Lang.trans('trans')
 ```
 
 ### templates
