@@ -2,7 +2,7 @@
 
 from masonite.packages import PackageProvider
 
-from ..translator import Translator
+from ..Lang import Lang
 
 
 class LangProvider(PackageProvider):
@@ -18,10 +18,9 @@ class LangProvider(PackageProvider):
     def register(self):
         super().register()
 
-        translator = Translator(app=self.application)
-        self.application.bind("translator", translator)
-
-        translator.setup_view()
+        lang = Lang(app=self.application)
+        self.application.bind("lang", lang)
+        lang.setup_view()
 
     def boot(self):
         """Boots services required by the container."""

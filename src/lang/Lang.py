@@ -5,7 +5,7 @@ from typing import Dict
 from masonite.configuration import config
 
 
-class Translator:
+class Lang:
 
     def __init__(self, app) -> None:
         self.app = app
@@ -27,8 +27,8 @@ class Translator:
         })
 
     def trans(self, key: str) -> str:
-        translations = self._load_language_file()
-        return translations.get(key, key)
+        lang = self._load_language_file()
+        return lang.get(key, key)
 
     def _load_language_file(self) -> Dict:
         file_path = os.path.join(self.app.base_path, "lang", f"{self._locale}.json")
