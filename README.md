@@ -64,10 +64,6 @@ Then you can publish the package resources (if needed) by doing:
 python craft package:publish lang
 ```
 
-## Usage
-
-### Basic Setup
-
 Set your application locale in `.env`:
 
 ```env
@@ -75,8 +71,6 @@ APP_LOCALE=en
 ```
 
 defaults to 'en' if not set.
-
-### Translation Files
 
 Create language files in the `/lang` directory:
 
@@ -95,15 +89,30 @@ Example translation file (`en.json`):
 }
 ```
 
-### Using Translations
+## Usage
+
+### Basic Setup
+
+### python
+
+```python
+from lang.facades import Lang
+
+Localization.current_locale()
+Localization.set_locale('en')
+Localization.is_locale('en')
+Localization.trans('trans')
+```
+
+### templates
 
 In your templates, use the `__()` helper to display translated text:
 
 ```html
-{{ __('welcome') }}
+{{ __('not') }}
 ```
 
-If the specified translation string does not exist, the __ function will return the translation string key. So, using the example above, the __ function would return welcome if the translation string does not exist.
+If the specified translation string does not exist, the __ function will return the translation string key.
 
 ## Contributing
 
