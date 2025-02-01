@@ -31,7 +31,7 @@ class Lang:
         return lang.get(key, key)
 
     def _load_language_file(self) -> Dict:
-        file_path = os.path.join(self.app.base_path, "lang", f"{self._locale}.json")
+        file_path = os.path.join(self.app.base_path, self.config.get('locales_dir'), f"{self._locale}.json")
 
         if not os.path.exists(file_path):
             return {}
