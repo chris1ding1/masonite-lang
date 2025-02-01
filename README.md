@@ -17,6 +17,11 @@
   <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
+## Roadmap
+
+- [] Command: sorts translation files by key.
+- [] Supports nested translation keys.
+
 ## Introduction
 
 Package description in one line displayed e.g. in README
@@ -72,10 +77,10 @@ APP_LOCALE=en
 
 defaults to 'en' if not set.
 
-Create language files in the `/lang` directory:
+Create language files in the `/locales` directory:
 
 ```
-/lang
+/locales
     en.json
     es.json
     zh_CN.json
