@@ -19,8 +19,8 @@
 
 ## Roadmap
 
-- [] Command: sorts translation files by key.
-- [] Supports nested translation keys.
+- [ ] Command: sorts translation files by key.
+- [ ] Supports nested translation keys.
 
 ## Introduction
 
